@@ -7,6 +7,7 @@ import 'package:tractian_test/features/assets/presenter/components/custom_input.
 import 'package:tractian_test/features/assets/presenter/components/location_tile.dart';
 import 'package:tractian_test/features/assets/presenter/components/option_filter.dart';
 import 'package:tractian_test/features/assets/presenter/controllers/asset_controller.dart';
+import 'package:tractian_test/ui/app_colors.dart';
 
 class AssetsPage extends StatelessWidget {
   AssetsPage({super.key});
@@ -17,7 +18,14 @@ class AssetsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.primary,
+        title: const Text(
+          'Assets',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+          ),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
@@ -61,24 +69,27 @@ class AssetsPage extends StatelessWidget {
                 controller.isLoading
                     ? const Center(child: CircularProgressIndicator())
                     : Expanded(
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: controller.rootLocations.length + controller.rootAssets.length,
-                    itemBuilder: (context, index) {
-                      if (index < controller.rootLocations.length) {
-                        return LocationTile(
-                          location: controller.rootLocations.elementAt(index),
-                          isInitialExpanded: controller.isFilter,
-                        );
-                      } else {
-                        return AssetTile(
-                          asset: controller.rootAssets.elementAt(index - controller.rootLocations.length),
-                          isInitialExpanded: controller.isFilter,
-                        );
-                      }
-                    },
-                  ),
-                ),
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: controller.rootLocations.length +
+                              controller.rootAssets.length,
+                          itemBuilder: (context, index) {
+                            if (index < controller.rootLocations.length) {
+                              return LocationTile(
+                                location:
+                                    controller.rootLocations.elementAt(index),
+                                isInitialExpanded: controller.isFilter,
+                              );
+                            } else {
+                              return AssetTile(
+                                asset: controller.rootAssets.elementAt(
+                                    index - controller.rootLocations.length),
+                                isInitialExpanded: controller.isFilter,
+                              );
+                            }
+                          },
+                        ),
+                      ),
               ],
             ),
           );
@@ -95,7 +106,8 @@ class AssetsPage extends StatelessWidget {
         onTap: () {
           controller.toggleSensorType(sensorType.toShortString());
         },
-        isActive: controller.sensorTypeSelectedList.contains(sensorType.toShortString()),
+        isActive: controller.sensorTypeSelectedList
+            .contains(sensorType.toShortString()),
       );
     }).toList();
   }
