@@ -6,8 +6,6 @@ Aplicação Flutter para visualização de assets empresariais em estrutura de �
 
 **Acesse a demo online:** [https://assets-tree.web.app](https://assets-tree.web.app)
 
-https://github.com/user-attachments/assets/17f98a18-60d6-4b65-a751-3f22c225b2cc
-
 ## 🏗️ Arquitetura
 
 A arquitetura utilizada no projeto segue uma versão simplificada do Clean Architecture, incorporando princípios do SOLID e usando o Modular para injeção de dependências. A intenção é demonstrar boas práticas e organização de código, mantendo a simplicidade.
@@ -55,8 +53,8 @@ Foi utilizado **Isolate** para construir a árvore de dados, garantindo que a an
 ## 🛠️ Tecnologias
 
 ### Versões
-- **Flutter:** 3.22.3 (channel stable)
-- **Dart:** 3.4.4
+- **Flutter:** 3.32.2 (channel stable)
+- **Dart:** 3.8.1
 
 ### Packages principais
 - `flutter_modular` - Injeção de dependências e roteamento
