@@ -63,6 +63,7 @@ Foi utilizado **Isolate** para construir a árvore de dados, garantindo que a an
 - `result_dart` - Tratamento de resultados
 - `mobx` - Gerenciamento de estado reativo
 - `dio` - Cliente HTTP
+- `flutter_svg` - Renderização de SVGs
 
 ### Gerenciamento de Estado
 Para o gerenciamento de estado, foi utilizado o **MobX** (Necessita de build runner para geração de código).
