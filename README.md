@@ -24,7 +24,7 @@ Para simular as chamadas de serviço e obter os dados, foi criado um mock.
 
 ### Clonando o repositório
 ```bash
-git clone https://github.com/seu-usuario/flutter_challenge_trees.git
+git clone https://github.com/gilbertohnrq/flutter_challenge_trees.git
 cd flutter_challenge_trees
 ```
 
@@ -41,18 +41,6 @@ flutter run
 
 # Para web especificamente
 flutter run -d chrome
-```
-
-### Build para produção
-```bash
-# Android
-flutter build apk --release
-
-# iOS
-flutter build ios --release
-
-# Web
-flutter build web --release
 ```
 
 ## 🧪 Testes
