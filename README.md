@@ -2,6 +2,10 @@
 
 Aplicação Flutter para visualização de assets empresariais em estrutura de árvore com filtros por nome, status e sensores.
 
+
+https://github.com/user-attachments/assets/040cf6fe-8597-4beb-a169-5a3d644801ab
+
+
 ## 🌐 Preview Web
 
 **Acesse a demo online:** [https://assets-tree.web.app](https://assets-tree.web.app)
